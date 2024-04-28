@@ -175,7 +175,7 @@ const EventsPage = () => {
             image: Yup.string()
               .required("Please add event banner")
               .label("Picture"),
-            time: Yup.string().max(50).required(),
+            time: Yup.string().max(100).required(),
             price: Yup.number().required(),
             availableTickets: Yup.number().required(),
           })}
