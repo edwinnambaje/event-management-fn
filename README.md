@@ -1,84 +1,67 @@
-# Event Management Platform
+# Event Management API
 
-Welcome to the Event Management Platform! This web application allows users to browse upcoming events, book tickets, and manage their bookings. Administrators have access to an admin dashboard for event management.
 
-## Table of Contents
+## Description
 
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Requirements](#project-requirements)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+Event Management API is an API will carry operations mainly of creating events, allowing different users to book events available in the system. The API uses Json Web Token (JWT) to authorise  users to access or carry out operations based on their role in the system.
 
-## Features
 
-### Event Listing and Details
+## Technologies Used
 
-- Display a list of upcoming events organized by the company.
-- Show essential details for each event, including title, date, location, and ticket availability.
+The following are the technologies which have been used in this API with their URLs
 
-### Booking Tickets
+- Postgres
+- Docker: https://www.docker.com/
+- NodeJs: https://nodejs.org/en
+- Typescript: https://www.typescriptlang.org/
 
-- Allow users to select the number of tickets they wish to book for an event.
-- Implement a simple booking process.
 
-### User Dashboard
+## Service local development
+The service demonstrates different operation of Event, Booking and Users (CRUD operation) using ExpressJs.
 
-- Provide users with a dashboard where they can view their booked events.
-- Allow users to cancel their bookings if needed.
+* To set up the service
 
-### Admin Dashboard
+Create a `.env` file with at least the following variables as per `.env.example`:
+* NODE_BACKEND_URL = `You indicate the URL of the backend
 
-- Create a separate admin dashboard accessible only to company administrators.
-- Allow admins to manage events, including creating new events, editing event details, and deleting events if necessary.
-- Provide functionality for admins to view all bookings and manage them (e.g., cancel bookings, view attendee details).
+Install required packages
+```bash
+npm install
+```
 
-### Basic Styling and UI/UX
+Start the service:
+```bash
+npm run dev
+```
 
-- Apply a simple and clean design using Tailwind CSS to ensure a consistent look and feel across the platform.
-- Focus on usability and intuitive navigation to enhance the user experience.
+This script starts the application in the development mode, consult `package.json` to learn more about scripts
 
-### Error Handling and Validation
 
-- Implement basic error handling and validation for user inputs (e.g., form submissions).
-- Provide informative error messages to guide users in case of invalid actions.
+* Now you can open your browser and interact with these URLs:
 
-## Tech Stack
+API JSON based web API based on OpenAPI: http://localhost:3000
+Note that the 4000 is the default port, replace it with the port you chose if you have passed a different one in your `vite.config.ts` file
 
-This project is built using the PERN (PostgreSQL, Express.js, React.js, Node.js, Sequelize) stack.
+## Functionalities Working
+- User can create an account
+- User can login
+- Admin can create an event
+- User can view all events
+- User can book an event
+- User can view his/her bookings on dashboard
+- Admin can view all bookings
+- Admin can view all users
+- Admin can view all events
+- Admin can cancel a booking
+- Admin can delete an event
+- Admin can delete a user
 
-## Project Requirements
+## Credentials for admin
+- email: nambajedwin@gmail.com
+- password: 123@Pass
 
-- Implement the specified features using the chosen stack.
-- Ensure the project meets the provided requirements and functionalities.
-- Aim for clean, readable, and well-organized code.
-- Provide documentation as needed for setup and usage.
+## Event Management Platform
+[Here](https://github.com/edwinnambaje/event-bn) is the link to the backend of the Event Management Platform.
 
-## Getting Started
-
-To get started with the Event Management Platform, follow these steps:
-
-1. Clone this repository to your local machine.
-2. Navigate to the project directory.
-3. Install dependencies by running `npm install` in the root directory.
-4. Set up your environment variables (database connection, API keys, etc.).
-5. Run the development server by executing `npm start` or `npm run dev`.
-6. Access the application in your web browser at `http://localhost:3000`.
-
-## Usage
-
-- Browse upcoming events on the homepage.
-- Click on an event to view its details and book tickets.
-- Log in as an administrator to access the admin dashboard.
-- Log in as a user to access User dashboard
-- Manage events, bookings, and other functionalities from the admin dashboard.
-
-## Contributing
-
-Contributions are welcome! Please fork this repository, make your changes, and submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+## Author and Acknowledgement
+Nambaje Edwin
