@@ -132,7 +132,7 @@ const EventCard = ({ eventItem }: { eventItem: Event }) => {
                 </div>
             </div>
             <button className="bg-white text-primary font-semibold border hover:bg-primary hover:text-white border-primary p-2 rounded-full" onClick={() => {
-                if (nbrTickets > 0) {
+                if (nbrTickets>=0) {
                     mutate({});
                 }
             }} disabled={isLoading}>
